@@ -207,6 +207,54 @@ a:hover {
     overflow: hidden;
 }
 
+/* --- About Page Specific --- */
+.portrait-wrapper {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.portrait-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.experience-item:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.exp-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.exp-company {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.awards-clients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
 /* --- スマートフォン対応 --- */
 @media (max-width: 900px) {
     .site-wrapper {
@@ -234,6 +282,13 @@ a:hover {
     }
     
     .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .awards-clients-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
