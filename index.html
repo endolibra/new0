@@ -3,64 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuke - Portfolio</title>
+    <title>uni*camasu - Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- 非常にクリーンでモダンなタイポグラフィを再現するためのフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Yusuke</h1>
-            <p class="subtitle">Web Developer / Designer</p>
+    <div class="site-wrapper">
+        <!-- ナビゲーション（4カラム） -->
+        <header class="top-nav">
+            <div class="nav-col brand"><h2>Portez&reg;</h2></div>
+            <div class="nav-col links">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-col socials">
+                <a href="#" target="_blank">X (Twitter)</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+            <div class="nav-col location">
+                <span>UK, London</span>
+                <span>9:57 AM</span>
+            </div>
         </header>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>こんにちは、Yusukeです。シンプルで使いやすいWebサイトやアプリケーションの制作を得意としています。</p>
-        </section>
+        <main>
+            <!-- ヒーローセクション（アシンメトリーレイアウト） -->
+            <section class="two-col-layout hero-section">
+                <div class="col-left"></div>
+                <div class="col-right">
+                    <p class="hero-text">
+                        <strong>Portez is a London-based digital designer exploring how design and technology shape the way we interact and create.</strong> 
+                        <span class="text-muted">His work blends clarity, function, and emotion &mdash; always built on collaboration and curiosity.</span>
+                    </p>
+                </div>
+            </section>
 
-        <section id="sns">
-            <h2>Connect</h2>
-            <ul class="sns-links">
-                <li><a href="https://x.com/your_handle" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
-                <li><a href="https://github.com/your_handle" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/your_handle" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
-        </section>
+            <!-- プロジェクトセクション -->
+            <section id="projects" class="two-col-layout">
+                <div class="col-left">
+                    <h3 class="section-title">Featured Projects</h3>
+                    <span class="text-muted text-small">2018 - 2024</span>
+                </div>
+                <div class="col-right">
+                    <div class="header-right-links">
+                        <a href="#" class="arrow-link">Check all projects &rarr;</a>
+                        <a href="#contact" class="arrow-link text-right">Contact Me &rarr;</a>
+                    </div>
+                    
+                    <div class="projects-wrapper">
+                        <!-- Project 1 -->
+                        <article class="project-item">
+                            <div class="project-meta">
+                                <h4 class="project-title">Lunare</h4>
+                                <div class="project-badges">
+                                    <span class="badge">2025</span>
+                                    <span class="badge">Web Design</span>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <!-- ダミー画像 -->
+                                <img src="https://via.placeholder.com/1200x700/e6e6e6/666666?text=Lunare+Preview" alt="Lunare Project">
+                            </div>
+                        </article>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <article class="project-card">
-                    <h3>Project Name 1</h3>
-                    <p>シンプルでモダンなWebアプリケーションです。ReactとNode.jsを使用して構築しました。</p>
-                    <a href="#" class="view-link">View Project →</a>
-                </article>
-                <article class="project-card">
-                    <h3>Project Name 2</h3>
-                    <p>企業のコーポレートサイトのデザイン・実装を行いました。レスポンシブデザインに対応しています。</p>
-                    <a href="#" class="view-link">View Project →</a>
-                </article>
-                <article class="project-card">
-                    <h3>Project Name 3</h3>
-                    <p>個人開発のタスク管理ツールです。使いやすさを第一に考えたUIを設計しました。</p>
-                    <a href="#" class="view-link">View Project →</a>
-                </article>
+                        <!-- Project 2 -->
+                        <article class="project-item">
+                            <div class="project-meta">
+                                <h4 class="project-title">Noir &amp; Tide</h4>
+                                <div class="project-badges">
+                                    <span class="badge">2025</span>
+                                    <span class="badge">Web Design</span>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://via.placeholder.com/1200x700/d9d9d9/555555?text=Noir+%26+Tide+Preview" alt="Noir & Tide Project">
+                            </div>
+                        </article>
+
+                        <!-- Project 3 -->
+                        <article class="project-item">
+                            <div class="project-meta">
+                                <h4 class="project-title">Funn &amp; Co.</h4>
+                                <div class="project-badges">
+                                    <span class="badge">2024</span>
+                                    <span class="badge">Product Design</span>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://via.placeholder.com/1200x700/f0f0f0/777777?text=Funn+%26+Co.+Preview" alt="Funn & Co. Project">
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- アバウトセクション -->
+            <section id="about" class="two-col-layout about-section">
+                <div class="col-left">
+                    <h3 class="section-title">About me</h3>
+                    <span class="text-muted text-small">Jay Portez</span>
+                </div>
+                <div class="col-right">
+                    <p class="about-text">
+                        <strong>I care about building digital experiences that people actually want to use. Whether it's a brand website or a product interface,</strong> 
+                        <span class="text-muted">my approach is guided by curiosity, simplicity, and a constant search for better ways to communicate ideas through design.</span>
+                    </p>
+                    
+                    <div class="about-details">
+                        <div class="details-col">
+                            <h5 class="list-title">Services</h5>
+                            <ul class="clean-list text-muted text-small">
+                                <li>Framer Design</li>
+                                <li>Creative Direction</li>
+                                <li>Brand Identity</li>
+                                <li>Strategy &amp; Concepts</li>
+                                <li>Digital Product Design</li>
+                            </ul>
+                        </div>
+                        <div class="details-col">
+                            <h5 class="list-title">[Featured Client]</h5>
+                            <ul class="clean-list text-muted text-small">
+                                <li>Webflow</li>
+                                <li>Adidas</li>
+                                <li>Facebook</li>
+                                <li>Nike</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer id="contact" class="site-footer">
+            <div class="footer-top">
+                <div class="foot-col">
+                    <span class="section-title">Portez &copy; 2025</span><br>
+                    <span class="text-muted text-small">All rights reserved</span>
+                </div>
+                <div class="foot-col">
+                    <span class="section-title">Made in</span><br>
+                    <span class="text-muted text-small">Framer</span>
+                </div>
+                <div class="foot-col">
+                    <span class="section-title">Interested to work with me?</span><br>
+                    <a href="mailto:contact@portez.com" class="text-muted text-small">contact@portez.com</a>
+                </div>
             </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>お仕事のご依頼やご相談は、お気軽にメールにてご連絡ください。</p>
-            <a href="mailto:hello@example.com" class="button">お仕事の相談をする (Mail)</a>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Yusuke. All rights reserved.</p>
+            
+            <div class="footer-bottom">
+                <h1 class="giant-text">uni*camasu</h1>
+            </div>
         </footer>
     </div>
-    <script src="scripts/main.js"></script>
 </body>
 </html>
