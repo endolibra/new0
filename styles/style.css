@@ -1,0 +1,191 @@
+/* モダン・シンプル・余白多め・スマホ対応設定 */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --accent-color: #007aff;
+    --accent-hover: #005bb5;
+    --border-color: #eaeaea;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 18px; /* スマホでも読みやすい大きめのベースフォント */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* メインコンテナ - 余白多めで中央配置 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+/* ヘッダー */
+header {
+    margin-bottom: 64px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+/* 各セクション */
+section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* リンク全般 */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* SNSリンク */
+.sns-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.sns-links li a {
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+
+.sns-links li a:hover {
+    border-bottom-color: var(--accent-hover);
+}
+
+/* プロジェクト一覧 - スマホでは1列、PCでは2列 */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 600px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.05);
+    border-color: #d1d1d1;
+}
+
+.project-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.view-link {
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.view-link:hover {
+    transform: translateX(4px);
+}
+
+/* コンタクトボタン */
+.button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.15);
+}
+
+.button:hover {
+    background-color: var(--accent-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 122, 255, 0.25);
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
