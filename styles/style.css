@@ -255,8 +255,62 @@ a:hover {
     gap: 40px;
 }
 
+/* --- Splash Screen --- */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.splash-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.splash-text {
+    font-size: 14vw;
+    font-weight: 500;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.splash-image-wrapper {
+    width: 25vw;
+    height: 15vw;
+    overflow: hidden;
+    margin: -1.5vw 0;
+    z-index: 10;
+}
+
+.splash-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* --- スマートフォン対応 --- */
 @media (max-width: 900px) {
+    .splash-text { font-size: 20vw; }
+    .splash-image-wrapper { width: 50vw; height: 35vw; }
     .site-wrapper {
         padding: 20px;
     }
