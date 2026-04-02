@@ -267,7 +267,8 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    /* ゆったりと時間をかけて（1.8秒）フェードアウトする設定 */
+    transition: opacity 1.8s ease-in-out, visibility 1.8s ease-in-out;
 }
 
 .splash-screen.hidden {

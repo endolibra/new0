@@ -44,10 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             document.removeEventListener('click', dismissSplash);
         };
 
-        // Automatically dismiss after 2.5 seconds
-        setTimeout(dismissSplash, 2500);
+        // 自動で消える設定（setTimeout）を削除。ユーザーの何かしらのアクション（スクロールやクリック）があるまで表示し続けます。
 
-        // Immediate dismissal triggers
+        // 即座に消すためのユーザートリガー
         window.addEventListener('wheel', dismissSplash, { passive: true }); // Mouse scroll
         window.addEventListener('touchmove', dismissSplash, { passive: true }); // Touch swipe
         document.addEventListener('keydown', dismissSplash); // Any key press
