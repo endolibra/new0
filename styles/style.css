@@ -209,7 +209,7 @@ a:hover {
 
 /* --- About Page Specific --- */
 .portrait-wrapper {
-    margin-top: 60px;
+    margin-top: 0px;
     width: 100%;
 }
 
@@ -276,7 +276,10 @@ a:hover {
 .concept-text {
     font-size: 14px;
     line-height: 1.8;
-    margin-bottom: 32px;
+}
+
+.about-concept {
+    margin-bottom: 40px;
 }
 
 .numbered-list {
