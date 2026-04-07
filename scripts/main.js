@@ -77,4 +77,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('keydown', dismissSplash); // Any key press
         document.addEventListener('click', dismissSplash); // Any click
     }
+
+    // === Update Clock for JP, Tokyo ===
+    const timeElement = document.getElementById('current-time');
+    if (timeElement) {
+        const updateTime = () => {
+            const now = new Date();
+            // Format time with standard JS API in Tokyo timezone
+            const timeString = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'Asia/Tokyo',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+            }).format(now);
+            timeElement.textContent = timeString;
+        };
+        
+        updateTime(); // Initial update
+        setInterval(updateTime, 1000 * 60); // Update every minute
+    }
 });

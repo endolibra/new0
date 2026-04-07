@@ -4,7 +4,7 @@
 */
 
 :root {
-    --bg-color: #ffffff;
+    --bg-color: #f7f5f3;
     --text-color: #111111;
     --text-muted: #888888;
     --border-color: #f0f0f0;
@@ -198,7 +198,7 @@ a:hover {
 }
 
 .giant-text {
-    font-size: 16vw; /* 画面幅に合わせて巨大化 */
+    font-size: 21vw; /* 画面幅に合わせて巨大化 */
     font-weight: 700;
     letter-spacing: -0.06em;
     text-align: center;
