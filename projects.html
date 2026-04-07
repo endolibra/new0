@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - uni*camasu</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .projects-intro {
+            margin-bottom: 120px;
+        }
+        .intro-text {
+            font-size: 18px;
+            line-height: 2;
+            letter-spacing: 0.02em;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .event-card {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .event-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .event-title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .event-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+        @media (max-width: 900px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <!-- ナビゲーション -->
+        <header class="top-nav">
+            <div class="nav-col brand"><h2><a href="index.html">Shinka&reg;</a></h2></div>
+            <div class="nav-col links">
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-col socials">
+                <a href="#" target="_blank">X (Twitter)</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+            <div class="nav-col location">
+                <span>UK, London</span>
+                <span>10:30 AM</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- 組織方針の説明文 -->
+            <section class="two-col-layout projects-intro">
+                <div class="col-left">
+                    <h3 class="section-title">OUR PROJECTS</h3>
+                </div>
+                <div class="col-right">
+                    <p class="intro-text text-muted">
+                        いつもそこにあったのに、気づかなかった。<br>
+                        自然の中にも、日常の片隅にも、そういうものが溢れている。<br>
+                        私たちは、その「見えていなかったもの」に出会いなおす場をつくっている。<br>
+                        ワークショップで驚きの感覚を取り戻し、プロジェクトでそれを誰かのために動かしてみる。
+                    </p>
+                </div>
+            </section>
+
+            <!-- イベントリスト（雑誌風レイアウト） -->
+            <section class="events-section">
+                <div class="events-grid">
+                    <!-- イベント1 -->
+                    <a href="event-detail.html" class="event-card">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop" alt="Event 1" class="event-image">
+                        <div class="event-content">
+                            <h4 class="event-title">身近な自然を再発見する「観察と記録」ワークショップ</h4>
+                            <div class="event-meta text-muted mt-2">
+                                <span class="badge">Workshop</span>
+                                <span>2026.05.15</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- イベント2 -->
+                    <a href="event-detail.html" class="event-card">
+                        <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=800&auto=format&fit=crop" alt="Event 2" class="event-image">
+                        <div class="event-content">
+                            <h4 class="event-title">見過ごされた素材から立ち上がる造形表現</h4>
+                            <div class="event-meta text-muted mt-2">
+                                <span class="badge">Exhibition</span>
+                                <span>2026.06.22</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer id="contact" class="site-footer">
+            <div class="footer-top">
+                <div class="foot-col">
+                    <span class="section-title">Shinka &copy; 2025</span><br>
+                    <span class="text-muted text-small">All rights reserved</span>
+                </div>
+                <div class="foot-col">
+                    <span class="section-title">Made in</span><br>
+                    <span class="text-muted text-small">Tokyo</span>
+                </div>
+                <div class="foot-col">
+                    <span class="section-title">Interested to work with me?</span><br>
+                    <a href="mailto:contact@portez.com" class="text-muted text-small">contact@portez.com</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <h1 class="giant-text">uni*camasu</h1>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

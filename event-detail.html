@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Detail - uni*camasu</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .event-hero {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 60px;
+        }
+
+        .event-header {
+            margin-bottom: 60px;
+        }
+
+        .event-title {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        
+        .event-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .event-body {
+            font-size: 16px;
+            line-height: 2;
+            color: var(--text-muted);
+            margin-bottom: 80px;
+        }
+
+        .participate-section {
+            padding: 60px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .btn-participate {
+            display: inline-block;
+            background-color: #111111;
+            color: #ffffff;
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, opacity 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-participate:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 900px) {
+            .event-hero {
+                height: 40vh;
+            }
+            .event-title {
+                font-size: 24px;
+            }
+            .participate-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <!-- ナビゲーション -->
+        <header class="top-nav">
+            <div class="nav-col brand"><h2><a href="index.html">Shinka&reg;</a></h2></div>
+            <div class="nav-col links">
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-col socials">
+                <a href="#" target="_blank">X (Twitter)</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+            <div class="nav-col location">
+                <span>UK, London</span>
+                <span>10:30 AM</span>
+            </div>
+        </header>
+
+        <main>
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200&auto=format&fit=crop" alt="Event Hero" class="event-hero">
+            
+            <section class="two-col-layout">
+                <div class="col-left">
+                    <h3 class="section-title">EVENT DETAIL</h3>
+                    <a href="projects.html" class="text-muted" style="text-decoration: underline; font-size: 13px;">&larr; Back to Projects</a>
+                </div>
+                <div class="col-right">
+                    <div class="event-header">
+                        <div class="event-meta text-muted">
+                            <span class="badge">Workshop</span>
+                            <span>2026.05.15 (Fri) 14:00 - 17:00</span>
+                        </div>
+                        <h1 class="event-title">身近な自然を再発見する<br>「観察と記録」ワークショップ</h1>
+                    </div>
+
+                    <div class="event-body">
+                        <p>
+                            毎日歩いている道、公園の片隅、あるいはオフィスの窓際。<br>
+                            私たちは普段、どれだけのものを見過ごしているでしょうか。<br><br>
+                            このワークショップでは、「関心を持つこと」をテーマに、身近にある自然の素材（葉、石、枝など）を採集し、それらをじっくりと観察・記録する体験を行います。<br>
+                            見に留めなかったものに光を当て、ルーペで表面の質感を見つめ、スケッチやフロッタージュ（こすり出し）などの手法で記録することで、対象の裏にある「語られない背景」に想像を膨らませます。<br><br>
+                            <strong>対象者：</strong> 日常に少しの驚きを取り戻したい方、新しい視座を得たい方（デザイン経験は不問です）<br>
+                            <strong>持ち物：</strong> お気に入りの筆記用具、スマートフォン<br>
+                            <strong>定員：</strong> 15名
+                        </p>
+                    </div>
+
+                    <div class="participate-section">
+                        <h3 style="margin-bottom: 24px; font-size: 20px;">参加申し込み</h3>
+                        <p class="text-muted" style="margin-bottom: 32px; font-size: 14px;">以下のボタンより参加フォーム（Googleフォーム）へお進みください。</p>
+                        <!-- ここにGoogleフォームのURLを入れてください -->
+                        <a href="https://forms.google.com/" target="_blank" class="btn-participate">参加する (Google Forms)</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer id="contact" class="site-footer">
+            <div class="footer-top">
+                <div class="foot-col">
+                    <span class="section-title">Shinka &copy; 2025</span><br>
+                    <span class="text-muted text-small">All rights reserved</span>
+                </div>
+                <div class="foot-col">
+                    <span class="section-title">Made in</span><br>
+                    <span class="text-muted text-small">Tokyo</span>
+                </div>
+                <div class="foot-col">
+                    <span class="section-title">Interested to work with me?</span><br>
+                    <a href="mailto:contact@portez.com" class="text-muted text-small">contact@portez.com</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <h1 class="giant-text">uni*camasu</h1>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
