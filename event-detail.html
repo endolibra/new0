@@ -44,29 +44,7 @@
             margin-bottom: 80px;
         }
 
-        .participate-section {
-            padding: 60px;
-            background-color: #f9f9f9;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        .btn-participate {
-            display: inline-block;
-            background-color: #111111;
-            color: #ffffff;
-            padding: 16px 40px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 4px;
-            transition: background-color 0.2s ease, opacity 0.2s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .btn-participate:hover {
-            opacity: 0.8;
-        }
+        /* Button styles now handled by global .pill-button class in style.css */
 
         @media (max-width: 900px) {
             .event-hero {
@@ -82,6 +60,13 @@
     </style>
 </head>
 <body>
+    <div class="fixed-logo-container">
+        <div class="back-to-top">
+            <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                <img src="images/logo.png" alt="Back to Top" class="header-logo">
+            </a>
+        </div>
+    </div>
     <div class="site-wrapper">
         <!-- ナビゲーション -->
         <header class="top-nav">
@@ -133,7 +118,7 @@
                         <h3 style="margin-bottom: 24px; font-size: 20px;">参加申し込み</h3>
                         <p class="text-muted" style="margin-bottom: 32px; font-size: 14px;">以下のボタンより参加フォーム（Googleフォーム）へお進みください。</p>
                         <!-- ここにGoogleフォームのURLを入れてください -->
-                        <a href="https://forms.google.com/" target="_blank" class="btn-participate">参加する (Google Forms)</a>
+                        <a href="https://forms.google.com/" target="_blank" class="pill-button" style="margin-top: 10px;">参加してみる</a>
                     </div>
                 </div>
             </section>
@@ -157,7 +142,10 @@
             </div>
             
             <div class="footer-bottom">
-                <h1 class="giant-text">uni*camasu</h1>
+                <h1 class="giant-text">
+                    <span class="align-left">uni*</span>
+                    <span class="align-right">camasu</span>
+                </h1>
             </div>
         </footer>
     </div>

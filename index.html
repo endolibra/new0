@@ -11,6 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="fixed-logo-container">
+        <div class="back-to-top">
+            <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                <img src="images/logo.png" alt="Back to Top" class="header-logo">
+            </a>
+        </div>
+    </div>
     <!-- Splash Screen -->
     <div id="splash-screen" class="splash-screen">
         <div class="splash-content">
@@ -44,8 +51,8 @@
                 <div class="col-left"></div>
                 <div class="col-right">
                     <p class="hero-text">
-                        <strong>Shinka is a London-based digital designer exploring how design and technology shape the way we interact and create.</strong> 
-                        <span class="text-muted">His work blends clarity, function, and emotion &mdash; always built on collaboration and curiosity.</span>
+                        <strong>Shinka is a Tokyo-based design collective that explores the connection between design and nature.</strong> 
+                        <span class="text-muted">We are committed to exploring what design can do to help create a nature-positive future.</span>
                     </p>
                 </div>
             </section>
@@ -57,40 +64,68 @@
                 </div>
                 <div class="col-right">
                     <p class="intro-text text-muted">
-                        いつもそこにあったのに、気づかなかった。<br>
-                        自然の中にも、日常の片隅にも、そういうものが溢れている。<br>
-                        私たちは、その「見えていなかったもの」に出会いなおす場をつくっている。<br>
-                        ワークショップで驚きの感覚を取り戻し、プロジェクトでそれを誰かのために動かしてみる。
+                        あるところから、探す<br><br>
+                        あたりまえに通り過ぎていたもの<br>
+                        手が動くことの不思議さ、何かを見ることができる喜び、それらを感じること<br>
+                        私たちは、見えていなかったものと出会いなおす場を作っていきます<br>
+                        ワークショップを通じて、発見と驚きを取り戻し、<br>
+                        プロジェクトを通して作る力を誰かのために使ってみる
                     </p>
                 </div>
             </section>
 
-            <!-- イベントリスト（雑誌風レイアウト） -->
-            <section class="events-section mb-large">
-                <div class="events-grid">
-                    <!-- イベント1 -->
-                    <a href="event-detail.html" class="event-card">
-                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop" alt="Event 1" class="event-image">
-                        <div class="event-content">
-                            <h4 class="event-title">身近な自然を再発見する「観察と記録」ワークショップ</h4>
-                            <div class="event-meta text-muted mt-2">
-                                <span class="badge">Workshop</span>
-                                <span>2026.05.15</span>
+            <!-- プロジェクトセクション（トップページ用） -->
+            <section id="projects" class="events-section">
+                <div class="projects-grid-featured">
+                    <!-- Featured Left (Large) -->
+                    <div class="featured-left">
+                        <a href="event-detail.html" class="event-card">
+                            <img src="images/photo1.JPG" alt="Featured Project" class="event-image">
+                            <div class="event-content">
+                                <h4 class="event-title">身近な自然を再発見する「観察と記録」ワークショップ</h4>
+                                <div class="event-meta text-muted mt-2">
+                                    <span class="badge">Workshop</span>
+                                    <span>2026.05.15</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Grid Right (4 small boxes) -->
+                    <div class="grid-right">
+                        <!-- Box 1 -->
+                        <div class="event-card">
+                            <img src="images/スクリーンショット 2026-04-07 19.53.37.png" alt="Coming Soon" class="event-image">
+                            <div class="event-content">
+                                <h4 class="event-title">Urban Nature Study #02</h4>
+                                <span class="coming-soon-label">Coming Soon</span>
                             </div>
                         </div>
-                    </a>
-
-                    <!-- イベント2 -->
-                    <a href="event-detail.html" class="event-card">
-                        <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=800&auto=format&fit=crop" alt="Event 2" class="event-image">
-                        <div class="event-content">
-                            <h4 class="event-title">見過ごされた素材から立ち上がる造形表現</h4>
-                            <div class="event-meta text-muted mt-2">
-                                <span class="badge">Exhibition</span>
-                                <span>2026.06.22</span>
+                        <!-- Box 2 -->
+                        <div class="event-card">
+                            <img src="images/スクリーンショット 2026-04-07 19.53.47.png" alt="Coming Soon" class="event-image">
+                            <div class="event-content">
+                                <h4 class="event-title">Ephemeral Light Archive</h4>
+                                <span class="coming-soon-label">Coming Soon</span>
                             </div>
                         </div>
-                    </a>
+                        <!-- Box 3 -->
+                        <div class="event-card">
+                            <img src="images/スクリーンショット 2026-04-07 19.53.55.png" alt="Coming Soon" class="event-image">
+                            <div class="event-content">
+                                <h4 class="event-title">Bio-Material Lab</h4>
+                                <span class="coming-soon-label">Coming Soon</span>
+                            </div>
+                        </div>
+                        <!-- Box 4 -->
+                        <div class="event-card">
+                            <img src="images/スクリーンショット 2026-04-07 19.54.11.png" alt="Coming Soon" class="event-image">
+                            <div class="event-content">
+                                <h4 class="event-title">Root System Drawing</h4>
+                                <span class="coming-soon-label">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -114,7 +149,10 @@
             </div>
             
             <div class="footer-bottom">
-                <h1 class="giant-text">uni*camasu</h1>
+                <h1 class="giant-text">
+                    <span class="align-left">uni*</span>
+                    <span class="align-right">camasu</span>
+                </h1>
             </div>
         </footer>
     </div>

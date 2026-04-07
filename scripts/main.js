@@ -13,36 +13,84 @@ document.addEventListener('DOMContentLoaded', () => {
         splashScreen.innerHTML = '';
 
         // Pool of images for the random accumulation effect
+        const imageFolder = "compressed_splash_images";
         const images = [
-            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop", 
-            "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop", 
-            "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=800&auto=format&fit=crop", 
-            "https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=800&auto=format&fit=crop", 
-            "https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=800&auto=format&fit=crop"
-        ];
+            "DSC00615.JPG",
+            "DSC00630.JPG",
+            "DSC04328.JPG",
+            "DSC04535.JPG",
+            "DSCF6066.JPG",
+            "DSCF6181.JPG",
+            "DSCF6222.JPG",
+            "IMG_3387のコピー.JPG",
+            "IMG_3389のコピー.JPG",
+            "IMG_3393のコピー.JPG",
+            "Realtime Image from Krea (3).png",
+            "Realtime Image from Krea (4).png",
+            "Realtime Image from Krea (6).png",
+            "_MG_1345.jpg",
+            "スクリーンショット 2026-01-25 21.00.37のコピー.png",
+            "スクリーンショット 2026-01-25 21.01.01のコピー.png",
+            "スクリーンショット 2026-01-25 21.01.24のコピー.png",
+            "スクリーンショット 2026-01-25 21.01.59のコピー.png",
+            "スクリーンショット 2026-01-25 21.02.22のコピー.png",
+            "スクリーンショット 2026-01-25 21.03.10のコピー.png",
+            "スクリーンショット 2026-01-25 21.05.31のコピー.png",
+            "スクリーンショット 2026-01-25 21.05.50のコピー.png",
+            "スクリーンショット 2026-01-25 21.06.16のコピー.png",
+            "スクリーンショット 2026-01-25 21.07.07のコピー.png",
+            "スクリーンショット 2026-01-25 21.07.28のコピー.png",
+            "スクリーンショット 2026-01-25 21.07.48のコピー.png",
+            "スクリーンショット 2026-01-25 21.08.09のコピー.png",
+            "スクリーンショット 2026-01-25 21.08.25のコピー.png",
+            "スクリーンショット 2026-01-25 21.08.46のコピー.png",
+            "スクリーンショット 2026-01-25 21.09.14のコピー.png",
+            "スクリーンショット 2026-01-25 21.09.41のコピー.png",
+            "スクリーンショット 2026-01-25 21.10.02のコピー.png"
+        ].map(filename => `${imageFolder}/${filename}`);
 
         let hasDismissed = false;
         let imageGenerationInterval;
+        
+        const placedPositions = [];
+        const MIN_DISTANCE = 25; // 画面幅・高さに対する割合（vw/vh）で最低限離す距離
 
         const spawnRandomImage = () => {
             if (hasDismissed) return;
 
             const img = document.createElement('img');
-            // Select random image from pool
             img.src = images[Math.floor(Math.random() * images.length)];
             img.className = 'random-floating-image';
 
-            // Random positioning (keeping some margin from the screen edges)
-            // assuming max image width is around 300px(30vw), let's keep max X at 70% and max Y at 70%
-            const randomX = Math.random() * 70;
-            const randomY = Math.random() * 70;
+            let randomX, randomY;
+            let attempts = 0;
+            let validPosition = false;
+
+            // 他の写真と被らない位置を探す（最大15回試行）
+            while (!validPosition && attempts < 15) {
+                randomX = Math.random() * 70; // 0 to 70vw
+                randomY = Math.random() * 70; // 0 to 70vh
+                validPosition = true;
+                
+                // 直近に配置された10個の写真の座標と比較
+                const recentPositions = placedPositions.slice(-10);
+                for (const pos of recentPositions) {
+                    const dist = Math.sqrt(Math.pow(randomX - pos.x, 2) + Math.pow(randomY - pos.y, 2));
+                    if (dist < MIN_DISTANCE) {
+                        validPosition = false;
+                        break;
+                    }
+                }
+                attempts++;
+            }
+
+            placedPositions.push({ x: randomX, y: randomY });
+
             img.style.left = `${randomX}vw`;
             img.style.top = `${randomY}vh`;
 
-            // Append to DOM
             splashScreen.appendChild(img);
 
-            // Trigger fade-in after a tiny delay for browser to register the element
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
                     img.style.opacity = '1';
@@ -50,10 +98,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Start accumulating images at a fast speed (e.g. every 300ms)
-        // Spawn the first image immediately
+        // 一度に出す量を増やすために、初期段階で一気に複数枚表示する
         spawnRandomImage();
-        imageGenerationInterval = setInterval(spawnRandomImage, 300);
+        spawnRandomImage();
+        spawnRandomImage();
+        
+        // 生成間隔を短くし（200ms）、かつ毎回2枚ずつ生成することで一気に出現させる
+        imageGenerationInterval = setInterval(() => {
+            spawnRandomImage();
+            setTimeout(spawnRandomImage, 100); // 100msずらしてもう1枚
+        }, 200);
 
         // Function to hide the splash screen and reveal the main site
         const dismissSplash = () => {

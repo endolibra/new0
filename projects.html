@@ -11,6 +11,13 @@
 
 </head>
 <body>
+    <div class="fixed-logo-container">
+        <div class="back-to-top">
+            <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                <img src="images/logo.png" alt="Back to Top" class="header-logo">
+            </a>
+        </div>
+    </div>
     <div class="site-wrapper">
         <!-- ナビゲーション -->
         <header class="top-nav">
@@ -37,41 +44,73 @@
                 </div>
                 <div class="col-right">
                     <p class="intro-text text-muted">
-                        いつもそこにあったのに、気づかなかった。<br>
-                        自然の中にも、日常の片隅にも、そういうものが溢れている。<br>
-                        私たちは、その「見えていなかったもの」に出会いなおす場をつくっている。<br>
-                        ワークショップで驚きの感覚を取り戻し、プロジェクトでそれを誰かのために動かしてみる。
+                        あるところから、探す<br><br>
+                        あたりまえに通り過ぎていたもの<br>
+                        手が動くことの不思議さ、何かを見ることができる喜び、それらを感じること<br>
+                        私たちは、見えていなかったものと出会いなおす場を作っていきます<br>
+                        ワークショップを通じて、発見と驚きを取り戻し、<br>
+                        プロジェクトを通して作る力を誰かのために使ってみる
                     </p>
                 </div>
             </section>
 
             <!-- イベントリスト（雑誌風レイアウト） -->
             <section class="events-section">
-                <div class="events-grid">
-                    <!-- イベント1 -->
-                    <a href="event-detail.html" class="event-card">
-                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop" alt="Event 1" class="event-image">
-                        <div class="event-content">
-                            <h4 class="event-title">身近な自然を再発見する「観察と記録」ワークショップ</h4>
-                            <div class="event-meta text-muted mt-2">
-                                <span class="badge">Workshop</span>
-                                <span>2026.05.15</span>
-                            </div>
+                <div class="article-section-header">
+                    <span class="section-label">New Projects</span>
+                </div>
+
+                <div class="article-grid">
+                    <!-- Article 1 -->
+                    <a href="event-detail.html" class="article-card">
+                        <div class="article-thumbnail">
+                            <img src="images/photo1.JPG" alt="Project Thumbnail">
+                        </div>
+                        <div class="article-content">
+                            <h4 class="article-title">身近な自然を再発見する「観察と記録」ワークショップ</h4>
+                            <span class="article-tag">Workshop</span>
+                            <span class="article-date">date 2026.05.15</span>
                         </div>
                     </a>
 
-                    <!-- イベント2 -->
-                    <a href="event-detail.html" class="event-card">
-                        <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=800&auto=format&fit=crop" alt="Event 2" class="event-image">
-                        <div class="event-content">
-                            <h4 class="event-title">見過ごされた素材から立ち上がる造形表現</h4>
-                            <div class="event-meta text-muted mt-2">
-                                <span class="badge">Exhibition</span>
-                                <span>2026.06.22</span>
-                            </div>
+                    <!-- Article 2 (Gradient placeholder) -->
+                    <a href="#" class="article-card">
+                        <div class="article-thumbnail">
+                            <img src="images/スクリーンショット 2026-04-07 19.53.37.png" alt="Coming Soon">
+                        </div>
+                        <div class="article-content">
+                            <h4 class="article-title">Urban Nature Study / 第2回：都市の隙間に自生する植物のフィールドワーク</h4>
+                            <span class="article-tag">Observation</span>
+                            <span class="article-date">date 2026.06.10</span>
+                        </div>
+                    </a>
+
+                    <!-- Article 3 (Gradient placeholder) -->
+                    <a href="#" class="article-card">
+                        <div class="article-thumbnail">
+                            <img src="images/スクリーンショット 2026-04-07 19.53.47.png" alt="Coming Soon">
+                        </div>
+                        <div class="article-content">
+                            <h4 class="article-title">Ephemeral Light Archive：光の層をアーカイブする映像表現</h4>
+                            <span class="article-tag">Art</span>
+                            <span class="article-date">date 2026.07.22</span>
+                        </div>
+                    </a>
+
+                    <!-- Article 4 (Gradient placeholder) -->
+                    <a href="#" class="article-card">
+                        <div class="article-thumbnail">
+                            <img src="images/スクリーンショット 2026-04-07 19.53.55.png" alt="Coming Soon">
+                        </div>
+                        <div class="article-content">
+                            <h4 class="article-title">フォトグラファー・野口花梨の「アクティブでありながら丁寧になりたい！」ウィッシュリスト</h4>
+                            <span class="article-tag">Interview</span>
+                            <span class="article-date">date 2026.08.05</span>
                         </div>
                     </a>
                 </div>
+
+                <div style="margin-bottom: 80px;"></div>
             </section>
         </main>
 
@@ -93,7 +132,10 @@
             </div>
             
             <div class="footer-bottom">
-                <h1 class="giant-text">uni*camasu</h1>
+                <h1 class="giant-text">
+                    <span class="align-left">uni*</span>
+                    <span class="align-right">camasu</span>
+                </h1>
             </div>
         </footer>
     </div>
