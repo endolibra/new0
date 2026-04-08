@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Splash Screen Animation Logic ===
     const splashScreen = document.getElementById('splash-screen');
     const splashImage = document.getElementById('splash-image');
-    
+
     if (splashScreen) {
         // Prevent body scrolling while splash is active
         document.body.style.overflow = 'hidden';
@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let hasDismissed = false;
         let imageGenerationInterval;
-        
+
         const placedPositions = [];
-        const MIN_DISTANCE = 25; // 画面幅・高さに対する割合（vw/vh）で最低限離す距離
+        const MIN_DISTANCE = 10; // 画面幅・高さに対する割合（vw/vh）で最低限離す距離
 
         const spawnRandomImage = () => {
             if (hasDismissed) return;
@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 他の写真と被らない位置を探す（最大15回試行）
             while (!validPosition && attempts < 15) {
-                randomX = Math.random() * 70; // 0 to 70vw
-                randomY = Math.random() * 70; // 0 to 70vh
+                randomX = Math.random() * 110 - 10; // -10 to 100vw
+                randomY = Math.random() * 110 - 10; // -10 to 100vh
                 validPosition = true;
-                
+
                 // 直近に配置された10個の写真の座標と比較
                 const recentPositions = placedPositions.slice(-10);
                 for (const pos of recentPositions) {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         spawnRandomImage();
         spawnRandomImage();
         spawnRandomImage();
-        
+
         // 生成間隔を短くし（200ms）、かつ毎回2枚ずつ生成することで一気に出現させる
         imageGenerationInterval = setInterval(() => {
             spawnRandomImage();
@@ -113,11 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const dismissSplash = () => {
             if (hasDismissed) return;
             hasDismissed = true;
-            
+
             clearInterval(imageGenerationInterval);
             splashScreen.classList.add('hidden');
             document.body.style.overflow = ''; // Restore scrolling
-            
+
             // Clean up event listeners so we don't leak memory
             window.removeEventListener('wheel', dismissSplash);
             window.removeEventListener('touchmove', dismissSplash);
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }).format(now);
             timeElement.textContent = timeString;
         };
-        
+
         updateTime(); // Initial update
         setInterval(updateTime, 1000 * 60); // Update every minute
     }

@@ -99,7 +99,7 @@ a:hover {
 
 .fixed-logo-container {
     position: fixed;
-    top: 38px; /* 2px up */
+    top: 36px; /* 2px further up */
     left: 0;
     width: 100%;
     pointer-events: none;
