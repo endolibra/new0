@@ -130,6 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('touchmove', dismissSplash, { passive: true }); // Touch swipe
         document.addEventListener('keydown', dismissSplash); // Any key press
         document.addEventListener('click', dismissSplash); // Any click
+
+        // 2.5秒後に自動的にフェードアウトを開始
+        setTimeout(dismissSplash, 2500);
     }
 
     // === Update Clock for JP, Tokyo ===
